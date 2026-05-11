@@ -400,6 +400,7 @@ DEPENDENCIES
   rails-controller-testing (= 1.0.5)
   reline (= 0.5.10)
   repl_type_completor (= 0.1.10)
+  rubocop (= 1.86.1)
   sassc-rails (= 2.1.2)
   selenium-webdriver (= 4.8.3)
   solargraph (= 0.56.2)
