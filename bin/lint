@@ -2,4 +2,10 @@
 set -euo pipefail
 
 export RUBOCOP_CACHE_ROOT="${RUBOCOP_CACHE_ROOT:-tmp/rubocop_cache}"
-bundle exec rubocop "$@"
+
+if [ "$#" -eq 0 ]; then
+  bundle exec rubocop
+  bundle exec erb_lint app/views
+else
+  bundle exec rubocop "$@"
+fi

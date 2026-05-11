@@ -2,4 +2,16 @@
 set -euo pipefail
 
 export RUBOCOP_CACHE_ROOT="${RUBOCOP_CACHE_ROOT:-tmp/rubocop_cache}"
-bundle exec rubocop -A "$@"
+
+if [ "$#" -eq 0 ]; then
+  status=0
+
+  bundle exec rubocop -A || status=$?
+  while IFS= read -r -d '' file; do
+    bundle exec htmlbeautifier "$file" || status=$?
+  done < <(find app/views -type f -name '*.erb' -print0)
+
+  exit "$status"
+else
+  bundle exec rubocop -A "$@"
+fi
