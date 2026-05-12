@@ -378,6 +378,7 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.43)
@@ -428,6 +429,7 @@ DEPENDENCIES
   turbo-rails (= 1.4.0)
   web-console (= 4.2.0)
   webdrivers (= 5.2.0)
+  will_paginate (= 3.3.1)
 
 CHECKSUMS
   actioncable (7.0.4.3) sha256=aa70062c2f2c55cc64fc6aa233223c37c7bc7f1cdbc1a5200cfa2ae4a18934f8
@@ -574,6 +576,7 @@ CHECKSUMS
   websocket (1.2.11) sha256=b7e7a74e2410b5e85c25858b26b3322f29161e300935f70a0e0d3c35e0462737
   websocket-driver (0.8.0) sha256=ed0dba4b943c22f17f9a734817e808bc84cdce6a7e22045f5315aa57676d4962
   websocket-extensions (0.1.5) sha256=1c6ba63092cda343eb53fc657110c71c754c56484aad42578495227d717a8241
+  will_paginate (3.3.1) sha256=34e9a8b81037add0c32dafca6a43e7edf95c3ee14f782bb56f07826efbe4a71d
   xpath (3.2.0) sha256=6dfda79d91bb3b949b947ecc5919f042ef2f399b904013eb3ef6d20dd3a4082e
   yard (0.9.43) sha256=cf8733a8f0485df2a162927e9b5f182215a61f6d22de096b8f402c726a1c5821
   yard-solargraph (0.1.0) sha256=a19a4619c942181a618fb9458970a9d2534cf7fda69fc43949629a7948a5930e

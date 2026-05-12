@@ -171,6 +171,22 @@ label {
   vertical-align: middle;
 }
 
+.gravatar_edit {
+  margin-top: 15px;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.users li {
+  border-top: 1px solid #e8e8e8;
+  overflow: auto;
+  padding: 10px 0;
+}
+
 .footer {
   margin-top: 40px;
   padding-top: 8px;
