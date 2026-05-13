@@ -176,6 +176,7 @@ GEM
     matrix (0.4.3)
     method_source (1.1.0)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.9)
     minitest (5.18.0)
     minitest-reporters (1.6.0)
       ansi
@@ -343,6 +344,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.6.1)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (1.6.1-aarch64-linux)
     sqlite3 (1.6.1-arm-linux)
     sqlite3 (1.6.1-arm64-darwin)
@@ -498,6 +501,7 @@ CHECKSUMS
   matrix (0.4.3) sha256=a0d5ab7ddcc1973ff690ab361b67f359acbb16958d1dc072b8b956a286564c5b
   method_source (1.1.0) sha256=181301c9c45b731b4769bc81e8860e72f9161ad7d66dd99103c9ab84f560f5c5
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
+  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
   minitest (5.18.0) sha256=06f43aa0692ce3acf19cb5bc539ad2c6095ca3d2c7e5fbafc58a7d847e898745
   minitest-reporters (1.6.0) sha256=2429bc38cd2cfb97ea2d3443ae2928c1ea59e912e8e90a6fcacca358c77ffcbb
   msgpack (1.8.0) sha256=e64ce0212000d016809f5048b48eb3a65ffb169db22238fb4b72472fecb2d732
@@ -556,6 +560,7 @@ CHECKSUMS
   solargraph (0.56.2) sha256=b3cc0b3973071d7206238a2bcea7c254deed3ed37807f4440cadf0452f7752b8
   sprockets (4.2.2) sha256=761e5a49f1c288704763f73139763564c845a8f856d52fba013458f8af1b59b1
   sprockets-rails (3.4.2) sha256=36d6327757ccf7460a00d1d52b2d5ef0019a4670503046a129fa1fb1300931ad
+  sqlite3 (1.6.1) sha256=54b8afa57e341d381b1cfcd8849aa826d87118abcd002a8159d9f4bdbf498f18
   sqlite3 (1.6.1-aarch64-linux) sha256=99d334b06d81edf5ab112c5025908d4228afa8031c19117ab21e9dd7752094cd
   sqlite3 (1.6.1-arm-linux) sha256=d286563c448269489b2be5655ac8330e522aa3e2c3088b612c1bc533ec2b6319
   sqlite3 (1.6.1-arm64-darwin) sha256=a877b19ddabd30960e22aa79a0f4a4126f87f51df4be88050034e71293d7477a
@@ -583,7 +588,7 @@ CHECKSUMS
   zeitwerk (2.7.5) sha256=d8da92128c09ea6ec62c949011b00ed4a20242b255293dd66bf41545398f73dd
 
 RUBY VERSION
-   ruby 3.2.9
+   ruby 3.3.7p123
 
 BUNDLED WITH
    2.7.2
