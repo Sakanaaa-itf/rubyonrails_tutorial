@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: session_params[:email].downcase)
     if user&.authenticate(session_params[:password])
-      handle_successful_login(user)
+      handle_authenticated_user(user)
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new', status: :unprocessable_entity
@@ -17,6 +17,15 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def handle_authenticated_user(user)
+    if user.activated?
+      handle_successful_login(user)
+    else
+      flash[:warning] = 'Account not activated. Check your email for the activation link.'
+      redirect_to root_url
+    end
+  end
 
   def handle_successful_login(user)
     log_in user
