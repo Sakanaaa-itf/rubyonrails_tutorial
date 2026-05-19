@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   resources :users, only: %i[index new create show edit update destroy]
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
+  resources :microposts,          only: %i[create destroy]
 end
