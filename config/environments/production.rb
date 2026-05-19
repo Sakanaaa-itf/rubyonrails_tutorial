@@ -1,5 +1,16 @@
 require 'active_support/core_ext/integer/time'
 
+mail_host = ENV.fetch('APP_HOST', 'example.com')
+smtp_settings = {
+  address: ENV.fetch('SMTP_ADDRESS', ENV.fetch('MAILGUN_SMTP_SERVER', nil)),
+  port: ENV.fetch('SMTP_PORT', ENV.fetch('MAILGUN_SMTP_PORT', 587)).to_i,
+  domain: ENV.fetch('SMTP_DOMAIN', mail_host),
+  user_name: ENV.fetch('SMTP_USERNAME', ENV.fetch('MAILGUN_SMTP_LOGIN', nil)),
+  password: ENV.fetch('SMTP_PASSWORD', ENV.fetch('MAILGUN_SMTP_PASSWORD', nil)),
+  authentication: :plain,
+  enable_starttls_auto: true
+}
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -64,9 +75,11 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  # Ignore bad email addresses and do not raise email delivery errors.
-  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  # Send account activation and password reset emails through SMTP.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: mail_host, protocol: ENV.fetch('APP_PROTOCOL', 'https') }
+  config.action_mailer.smtp_settings = smtp_settings
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
