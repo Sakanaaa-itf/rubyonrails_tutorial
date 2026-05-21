@@ -1,4 +1,5 @@
 {
   "solargraph.commandPath": "/Users/kaima_oka/.rbenv/shims/solargraph",
+  "solargraph.bundlerPath": "/Users/kaima_oka/.rbenv/shims/bundle",
   "solargraph.useBundler": true
 }

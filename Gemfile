@@ -5,9 +5,11 @@ ruby '3.3.7'
 
 gem 'bcrypt',          '3.1.18'
 gem 'bootsnap',        '1.16.0', require: false
+gem 'carrierwave',     '3.1.2'
 gem 'concurrent-ruby', '1.3.4'
 gem 'importmap-rails', '1.1.5'
 gem 'jbuilder',        '2.11.5'
+gem 'mini_magick',     '4.13.2'
 gem 'puma',            '5.6.8'
 gem 'rails',           '7.0.4.3'
 gem 'sassc-rails',     '2.1.2'
@@ -41,6 +43,10 @@ group :test do
   gem 'rails-controller-testing', '1.0.5'
   gem 'selenium-webdriver',       '4.8.3'
   gem 'webdrivers',               '5.2.0'
+end
+
+group :production do
+  gem 'fog-aws', '3.33.2', require: false
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
